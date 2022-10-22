@@ -113,8 +113,7 @@ module.exports = function(eleventyConfig) {
   -------------------------------------------------------------------------- */
   eleventyConfig.setLibrary('md', markdownLib);
   eleventyConfig.setDataDeepMerge(true);
-  eleventyConfig.addPassthroughCopy({ '_source/_assets/fonts': 'assets/fonts' });
-  eleventyConfig.addPassthroughCopy({ '_source/_assets/images': 'assets' });
+  eleventyConfig.addPassthroughCopy({ '_source/_assets/favicon': 'assets/favicon' });
 
   return {
     dir: {
