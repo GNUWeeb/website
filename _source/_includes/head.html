@@ -5,14 +5,15 @@
   <title>{{ site.title }}{% if section_title %} {{ section_title }}{% endif %}{% if title %}: {{ title }}{% endif %}</title>
   {% if description -%}
     <meta name="description" content="{{ description }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
   {% endif -%}
   <link rel="canonical" href="{{ page.url | remove: "index.html" | remove: ".html" | prepend: site.url }}">
-
-<!--   <link rel="alternate icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-  <link rel="mask-icon" href="/assets/favicon.svg" color="#000000">
-  <link rel="apple-touch-icon" href="/assets/favicon-196x196.png"> -->
-
+  {% include 'meta.html' %}
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="/assets/main.css">
   <script src="/assets/main.js" type="module"></script>
 </head>
